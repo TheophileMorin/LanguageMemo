@@ -3,8 +3,8 @@
 /**
  * On peut déclarer des variables via les mots clés :
  * - 'var' : variable
- * - 'let' : variable dont la portée est celle du bloc
- * - 'const' : variable constante
+ * - 'let' : variable dont la portée est celle du bloc (ES6)
+ * - 'const' : variable constante (ES6)
  * - sans mot clé : portée globale mais conflit avec "use strict"
  *
  * Phénomène de Hoisting valable uniquement pour les variables déclarées avec 'var'
