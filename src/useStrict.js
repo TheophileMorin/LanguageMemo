@@ -112,7 +112,6 @@
 
 
 
-
 /*
  Exemple 8 : Restriction sur le statement with
  */
@@ -125,12 +124,11 @@
 
 
 
-
 /*
  Exemple 9 : Restriction sur la création de variables via la fonction eval()
  */
 (function() {
-    "use strict";
+    //"use strict";
 
     eval('var object = {x : 2}'); //-> ReferenceError: object is not defined
     console.log(object);
