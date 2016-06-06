@@ -20,6 +20,8 @@ var globalVar = 8;
 
 (function() {
 
+    console.log('globalVar dans une portée enfant : ' + globalVar );
+
     console.log('a avant la déclaration (var a): ' + a); //-> undefined  - cf. Hoisting
     //console.log(b); //-> ReferenceError
     //console.log(c); //-> ReferenceError
@@ -28,6 +30,8 @@ var globalVar = 8;
     const b = 'CONST';
     let c = 'very local';
     var undef;
+
+    //b = 5; //-> TypeError: Assignment to constant variable.
 
     if(undef === undefined) {
         //true
@@ -42,14 +46,6 @@ var globalVar = 8;
     }
     console.log('innerVar hors du bloc : ' + innerVar);
     //console.log('innerLet hors du bloc : ' + innerLet); //-> ReferenceError
-
-    console.log('globalVar dans une portée enfant : ' + globalVar );
-
-    //b = 5; //-> TypeError: Assignment to constant variable.
-
-
-
-
 
     f1(); //OK
     function f1() {
@@ -70,7 +66,6 @@ var globalVar = 8;
     //console.log('appel a la variable f2a hors du contexte de f2 : ' + f2a); //-> ReferenceError:
     //console.log('appel a la variable f2b hors du contexte de f2 : ' + f2b); //-> ReferenceError:
 
-    console.log(f2);
 })();
 
 //console.log(a); //-> ReferenceError
